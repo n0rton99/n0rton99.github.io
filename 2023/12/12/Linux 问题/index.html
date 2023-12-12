@@ -13,21 +13,23 @@
     
     <!--- Seo Part-->
     
-    <link rel="canonical" href="https://georgechan95.github.io/2023/12/04/hello-world/"/>
+    <link rel="canonical" href="https://georgechan95.github.io/2023/12/12/linux 问题/"/>
     <meta name="robots" content="index,follow">
     <meta name="googlebot" content="index,follow">
     <meta name="revisit-after" content="1 days">
     
-        <meta name="description" content="Welcome to Hexo ! This is your very first post. Check documentation  for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting  or you can ask me on GitHub . Q">
+        <meta name="description" content="网络问题排查目录1.[[Linux 问题#网络不通]]  [[Linux 问题#链路是否连通]] [[Linux 问题#网卡是否正常启用]] [[Linux 问题#是否正确设置网关]] [[Linux 问题#DNS工作状况]] [[Linux 问题#是否可以正常路由到远程主机]] [[Linux 问题#远程主机是否开放端口]] [[Linux 问题#本机查看监听端口]] [[Linux 问题#查看">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Hello World">
-<meta property="og:url" content="https://georgechan95.github.io/2023/12/04/hello-world/index.html">
+<meta property="og:title" content="Linux问题">
+<meta property="og:url" content="https://georgechan95.github.io/2023/12/12/Linux%20%E9%97%AE%E9%A2%98/index.html">
 <meta property="og:site_name" content="Hexo">
-<meta property="og:description" content="Welcome to Hexo ! This is your very first post. Check documentation  for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting  or you can ask me on GitHub . Q">
+<meta property="og:description" content="网络问题排查目录1.[[Linux 问题#网络不通]]  [[Linux 问题#链路是否连通]] [[Linux 问题#网卡是否正常启用]] [[Linux 问题#是否正确设置网关]] [[Linux 问题#DNS工作状况]] [[Linux 问题#是否可以正常路由到远程主机]] [[Linux 问题#远程主机是否开放端口]] [[Linux 问题#本机查看监听端口]] [[Linux 问题#查看">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2023-12-04T08:02:50.700Z">
-<meta property="article:modified_time" content="2023-12-04T08:02:52.000Z">
+<meta property="article:published_time" content="2023-12-12T12:18:39.490Z">
+<meta property="article:modified_time" content="2023-12-12T12:18:04.000Z">
 <meta property="article:author" content="John Doe">
+<meta property="article:tag" content="Linux">
+<meta property="article:tag" content="运维">
 <meta name="twitter:card" content="summary">
     
     
@@ -40,7 +42,7 @@
     
     <title>
         
-            Hello World -
+            Linux问题 -
         
         Norton&#39;s Blog
     </title>
@@ -344,7 +346,7 @@
         <div class="article-title relative w-full">
             
                 <div class="w-full flex items-center pt-6 justify-start">
-                    <h1 class="article-title-regular text-second-text-color text-4xl md:text-6xl font-bold px-2 sm:px-6 md:px-8 py-3">Hello World</h1>
+                    <h1 class="article-title-regular text-second-text-color text-4xl md:text-6xl font-bold px-2 sm:px-6 md:px-8 py-3">Linux问题</h1>
                 </div>
             
             </div>
@@ -356,7 +358,7 @@
                 </div>
                 <div class="info flex flex-col justify-between">
                     <div class="author flex items-center">
-                        <span class="name text-default-text-color text-lg font-semibold">n0rton99</span>
+                        <span class="name text-default-text-color text-lg font-semibold">norton</span>
                         
                             <span class="author-label ml-1.5 text-xs px-2 py-0.5 rounded-small text-third-text-color border border-shadow-color-1">Lv1</span>
                         
@@ -365,20 +367,35 @@
                         <div class="article-meta-info">
     <span class="article-date article-meta-item">
         <i class="fa-regular fa-pen-fancy"></i>&nbsp;
-        <span class="desktop">2023-12-04 16:02:50</span>
-        <span class="mobile">2023-12-04 16:02:50</span>
+        <span class="desktop">2023-12-12 20:18:39</span>
+        <span class="mobile">2023-12-12 20:18:39</span>
         <span class="hover-info">创建</span>
     </span>
     
         <span class="article-date article-meta-item">
             <i class="fa-regular fa-wrench"></i>&nbsp;
-            <span class="desktop">2023-12-04 16:02:52</span>
-            <span class="mobile">2023-12-04 16:02:52</span>
+            <span class="desktop">2023-12-12 20:18:04</span>
+            <span class="mobile">2023-12-12 20:18:04</span>
             <span class="hover-info">更新</span>
         </span>
     
 
     
+    
+        <span class="article-tags article-meta-item">
+            <i class="fa-regular fa-tags"></i>&nbsp;
+            <ul>
+                
+                    <li>
+                        <a href="/tags/Linux/">Linux</a>&nbsp;
+                    </li>
+                
+                    <li>
+                        | <a href="/tags/%E8%BF%90%E7%BB%B4/">运维</a>&nbsp;
+                    </li>
+                
+            </ul>
+        </span>
     
 
     
@@ -400,19 +417,110 @@
 
 
         <div class="article-content markdown-body px-2 sm:px-6 md:px-8 pb-8">
-            <p>Welcome to <a class="link"   target="_blank" rel="noopener" href="https://hexo.io/" >Hexo <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a>! This is your very first post. Check <a class="link"   target="_blank" rel="noopener" href="https://hexo.io/docs/" >documentation <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a> for more info. If you get any problems when using Hexo, you can find the answer in <a class="link"   target="_blank" rel="noopener" href="https://hexo.io/docs/troubleshooting.html" >troubleshooting <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a> or you can ask me on <a class="link"   target="_blank" rel="noopener" href="https://github.com/hexojs/hexo/issues" >GitHub <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><div class="highlight-container" data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure></div>
+            <h3 id="网络问题排查"><a href="#网络问题排查" class="headerlink" title="网络问题排查"></a>网络问题排查</h3><h4 id="目录"><a href="#目录" class="headerlink" title="目录"></a>目录</h4><p>1.[[Linux 问题#网络不通]]</p>
+<ul>
+<li>[[Linux 问题#链路是否连通]]</li>
+<li>[[Linux 问题#网卡是否正常启用]]</li>
+<li>[[Linux 问题#是否正确设置网关]]</li>
+<li>[[Linux 问题#DNS工作状况]]</li>
+<li>[[Linux 问题#是否可以正常路由到远程主机]]</li>
+<li>[[Linux 问题#远程主机是否开放端口]]</li>
+<li>[[Linux 问题#本机查看监听端口]]</li>
+<li>[[Linux 问题#查看防火墙规则]]<br>2.[[Linux 问题#网络速度慢]]<br>3.[[Linux 问题#网络排查思路]]</li>
+</ul>
+<h4 id="网络不通"><a href="#网络不通" class="headerlink" title="网络不通"></a>网络不通</h4><p>如果是网络不通，要定位具体的问题，一般是不断尝试排除不可能故障的地方，最终定位问题根源。一般需要查看</p>
+<ul>
+<li>是否接入到链路    ethtool  eth0</li>
+<li>是否启用了相应的网卡   ifconfig  eth1</li>
+<li>本地网络是否连接   route  -n查看gateway网关，然后再ping  网关</li>
+<li>DNS故障    nslookup   域名&#x2F;ip</li>
+<li>能否路由到目标主机    traceroute <a class="link"   target="_blank" rel="noopener" href="http://www.baidu.com/" >www.baidu.com <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a></li>
+<li>远程端口是否开放    nmap -p 22  220.181.111.188 </li>
+<li>本机查看监听端口   netstat -lnp | grep 端口号</li>
+<li>查看防火墙规则   iptables -L  或  SELinux</li>
+</ul>
+<p>一般来说当存在网络不通的故障时，访问出端和入端的信息是我们都要收集的，目的在于确定问题所在的主机或者区段。假如a不能访问c而b能够访问c，那么很明显问题出在a或a到c的网络上，而通过同一子网中的几台机器a、b可以正常访问网络，却不能访问c，那么可能是这个网络到c存在题，或c存在问题。定位了问题所在的主机，一般有一些步骤来逐渐缩小问题范围，最终定位问题：</p>
+<h5 id="链路是否连通"><a href="#链路是否连通" class="headerlink" title="链路是否连通"></a>链路是否连通</h5><p>即检查网卡与网络是否<strong>物理连通</strong>，网线是否插好且连接可用，很多时候不能立刻到机房确定物理连接，可以用命令：</p>
+<div class="highlight-container" data-rel="Shell"><figure class="iseeu highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ethtool ethN    #ehtN是连接到故障网络的网卡</span><br></pre></td></tr></table></figure></div>
 
-<p>More info: <a class="link"   target="_blank" rel="noopener" href="https://hexo.io/docs/writing.html" >Writing <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><div class="highlight-container" data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure></div>
+<blockquote>
+<p>例1：使用ethtool 查看 ens33 的物理连接<br>其中，speed显示了当前网卡的速度，这是一个千兆网卡；<br>Duplex显示了当前网络支持全双工；<br>Link detected显示当前网卡和网络的物理连接正常。<br>通常网速和全&#x2F;半双工状态是主机和网络协议商自动协商的，<br>例如这里第8行的 auto-negotiation。如果发现15行的双工被设置成了Half，可以手动将其改为全双工网络：<br>ethtool -s ens33 autoneg off duplex full</p>
+</blockquote>
+<h5 id="网卡是否正常启用"><a href="#网卡是否正常启用" class="headerlink" title="网卡是否正常启用"></a>网卡是否正常启用</h5><p>一般网络物理连接故障的情况并不多见，当排除物理连接上的问题后，需要进一步查看网卡的工作状态。</p>
+<div class="highlight-container" data-rel="Shell"><figure class="iseeu highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ifconfig ensN #ensN是网卡编号</span><br></pre></td></tr></table></figure></div>
 
-<p>More info: <a class="link"   target="_blank" rel="noopener" href="https://hexo.io/docs/server.html" >Server <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><div class="highlight-container" data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure></div>
+<p>例2：使用ifconfig命令检查网卡ens33状态</p>
+<blockquote>
+<p>inet:IP地址<br>netmask:子网掩码<br>broadcast:<br>网络收发的字节数、包数、错误数以及丢包情况，特别是 TX 和 RX 部分的 errors、dropped、overruns、carrier 以及 collisions 等指标不为 0 时，通常表示出现了网络 I&#x2F;O 问题。其中：<br>errors 表示发生错误的数据包数，比如校验错误、帧同步错误等；<br>dropped 表示丢弃的数据包数，即数据包已经收到了 Ring Buffer，但因为内存不足等原因丢包；overruns 表示超限数据包数，即网络 I&#x2F;O 速度过快，导致 Ring Buffer 中的数据包来不及处理（队列满）而导致的丢包；<br>carrier 表示发生 carrirer 错误的数据包数，比如双工模式不匹配、物理电缆出现问题等；collisions 表示碰撞数据包数。</p>
+</blockquote>
+<h5 id="是否正确设置网关"><a href="#是否正确设置网关" class="headerlink" title="是否正确设置网关"></a>是否正确设置网关</h5><p>如果网卡已经正常启动，需要确认目标网络接口是否正确配置网关，同时主机和网关之间的连接没有问题，通过route命令和ping命令结合完成这一阶段的排查。</p>
+<div class="highlight-container" data-rel="Shell"><figure class="iseeu highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">route -n</span><br></pre></td></tr></table></figure></div>
 
-<p>More info: <a class="link"   target="_blank" rel="noopener" href="https://hexo.io/docs/generating.html" >Generating <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><div class="highlight-container" data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure></div>
+<p>例3 使用route 命令查看内核路由表</p>
+<blockquote>
+<p>route -n 以IP而不是主机名的形式显示网关等信息，一方面更快，另一方面不涉及DNS，通过route命令查看内核路由，检验具体的网卡是否连接到目标网路的路由，之后就可以尝试ping 网关，排查与网关之间的连接。<br><strong>如果无法ping通网关，可能是网关限制了ICMP数据包，或者交换机设置的问题</strong></p>
+</blockquote>
+<h5 id="DNS工作状况"><a href="#DNS工作状况" class="headerlink" title="DNS工作状况"></a>DNS工作状况</h5><p>通常很多网络问题是DNS故障或配置不当造成的，nslookup和dig命令能够用来排查DNS问题。例4. 使用nslookup命令查看DNS解析</p>
+<div class="highlight-container" data-rel="Shell"><figure class="iseeu highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">nslookup xxx #xxx可以是域名也可以是ip地址</span><br></pre></td></tr></table></figure></div>
 
-<p>More info: <a class="link"   target="_blank" rel="noopener" href="https://hexo.io/docs/one-command-deployment.html" >Deployment <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a></p>
+<blockquote>
+<p>这里的DNS服务器 192.168.20.2位于当前局域网内，nslookup的结果显示DNS工作正常。如果这里nslookup命令无法解析目标域名，则很有可能是DNS配置不当，到&#x2F;etc&#x2F;resolv.conf文件中查看是否存在域名服务器的配置：</p>
+</blockquote>
+<div class="highlight-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"># resolv.conf的内容</span><br><span class="line"># Generated by NetworkManager</span><br><span class="line">search localdomain # DNS配置</span><br><span class="line">nameserver 8.8.8.8 # 配置的DNS服务器地址</span><br></pre></td></tr></table></figure></div>
+
+<p>例5 及时生效的DNS配置——&#x2F;etc&#x2F;resolv.conf文件</p>
+<blockquote>
+<p>&#x2F;etc&#x2F;resolv.conf文件是临时即刻生效的DNS服务器配置。<br>如果我们的DNS服务器在一个子网内，而无法ping通它，这个DNS服务器很可能已经宕机。</p>
+</blockquote>
+<h5 id="是否可以正常路由到远程主机"><a href="#是否可以正常路由到远程主机" class="headerlink" title="是否可以正常路由到远程主机"></a>是否可以正常路由到远程主机</h5><p>互联网是通过大量路由器中继连接起来的，网络的访问就是在这些节点间一跳一跳最终到达目的地，想要查看网络连接，最直接最常用的命令是ping，ping得通，说明路由工作正常，但是<strong>如果ping不通，traceroute命令可以查看从当前主机到目标主机的全部“跳”的过程</strong>。<br>traceroute和ping命令都是使用ICMP协议包。</p>
+<div class="highlight-container" data-rel="Shell"><figure class="iseeu highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">traceroute xxx #xxx是IP地址或者域名</span><br></pre></td></tr></table></figure></div>
+
+<blockquote>
+<p>例7. 使用traceroute追踪路由状况<br>traceroute可以查看网络中继在哪里中断或者网络延时情况，是因为网络不通或者某个网关限制了ICMP协议包。</p>
+</blockquote>
+<h5 id="远程主机是否开放端口"><a href="#远程主机是否开放端口" class="headerlink" title="远程主机是否开放端口"></a>远程主机是否开放端口</h5><p><strong>telnet命令</strong>是检查<strong>端口开放</strong>情况的利器，或者<strong>nmap工具</strong></p>
+<p>centos7中需先安装telnet命令<br>    yum list telnet*              列出telnet相关的安装包<br>    yum install telnet-server          安装telnet服务<br>    yum install telnet.*           安装telnet客户端</p>
+<div class="highlight-container" data-rel="Shell"><figure class="iseeu highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">telnet DOMAIN/IP PORT </span><br></pre></td></tr></table></figure></div>
+
+<p>例8. 使用telnet检测远程主机的端口开放情况</p>
+<blockquote>
+<p>telnet IP PORT，可以查看指定远程主机是否开放目标端口，这里百度的前端服务器开放80端口是网页服务必须的。<br>但是telnet 命令的功能非常有限，当防火墙存在时，就不能很好地显示结果，所以telnet无法连接包含两种可能：1是端口确实没有开放，2是防火墙过滤了连接。<br>例如我们尝试 telnet 连接百度前端服务器的 22 端口：<br>无法继续进行，但是我们无法判断究竟是端口没有开放，还是被防火墙给拦截了，这时使用nmap工具将更加强大：</p>
+</blockquote>
+<p>例9. 使用nmap工具检测端口开放情况</p>
+<blockquote>
+<p>同样的服务器，使用nmap检测，观察到第7行，说明实际上该服务器是启用了22端口的，但是防火墙过滤了数据包，如果端口真的没有启用，那么第7行的STATE将显示closed，而不是filtered。开放的端口其状态将是open。<br>这时就可以了解，端口无法连接的原因是端口关闭还是防火墙过滤了。</p>
+</blockquote>
+<h5 id="本机查看监听端口"><a href="#本机查看监听端口" class="headerlink" title="本机查看监听端口"></a>本机查看监听端口</h5><p>如果要在本地查看某个端口是否开放，可以使用如下命令：</p>
+<div class="highlight-container" data-rel="Shell"><figure class="iseeu highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">netstat -lnp | grep PORT</span><br></pre></td></tr></table></figure></div>
+<p>其中，参数：<br>-l，显示正在监听的套接字<br>-p，显示套接字所属的进程ID和进程名<br>-n，以数字形式显示地址</p>
+<p>例10. 查看本地指定端口的监听情况</p>
+<blockquote>
+<p>netstat -lnp | grep :11211<br>Proto Recv-Q Send-Q Local Address           Foreign Address         State       PID&#x2F;Program name<br>tcp        0      0 10.0.0.11:11211         0.0.0.0:*               LISTEN      28911&#x2F;memcached<br>udp        0      0 10.0.0.11:11211         0.0.0.0:*                           28911&#x2F;memcached</p>
+</blockquote>
+<p>例10以memcached服务为例，查看当前活动端口监听的网络，如果netstat找不到指定的端口，说明没有进程在监听指定端口。</p>
+<blockquote>
+<p>其中第一列是套接字通信协议，第2列和第3列显示的是接收和发送队列，第4列是主机监听的本地地址，反映了该套接字监听的网络；第6列显示当前套接字的状态，最后一列显示打开端口的进程。</p>
+</blockquote>
+<h5 id="查看防火墙规则"><a href="#查看防火墙规则" class="headerlink" title="查看防火墙规则"></a>查看防火墙规则</h5><p>使用 iptables -L 命令查看当前主机的防火墙。</p>
+<div class="highlight-container" data-rel="Shell"><figure class="iseeu highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">iptables -L </span><br></pre></td></tr></table></figure></div>
+
+<h4 id="网络速度慢"><a href="#网络速度慢" class="headerlink" title="网络速度慢"></a>网络速度慢</h4><p>一般有以下几个方式定位问题源：</p>
+<ul>
+<li>DNS是否是问题的源头： dig 或  nslookup</li>
+<li>查看路由过程中哪些节点是瓶颈：traceroute  查看网络中每一跳的延时，定位延时最高的网络区段</li>
+<li>查看带宽的使用情况：iftop 查看哪些网络连接占用的带宽较多</li>
+<li>使用命令tcpdump</li>
+</ul>
+<h4 id="网络排查思路"><a href="#网络排查思路" class="headerlink" title="网络排查思路"></a>网络排查思路</h4><ul>
+<li>网卡是否工作，包括硬件和驱动：lspci，dmesg</li>
+<li>IP参数是否正确设置：ifconfig</li>
+<li>局域网内通信是否正常：ping</li>
+<li>路由信息是否正常：route -n</li>
+<li>DNS状态：dig, nslookup</li>
+<li>路由节点状况与延时：traceroute</li>
+<li>服务监听端口：netstat -lnp</li>
+<li>防火墙：iptables, SELinux</li>
+</ul>
 
         </div>
 
@@ -420,18 +528,18 @@
             <div class="post-copyright-info my-8 px-2 sm:px-6 md:px-8">
                 <div class="article-copyright-info-container">
     <ul>
-        <li><strong>标题:</strong> Hello World</li>
-        <li><strong>作者:</strong> n0rton99</li>
+        <li><strong>标题:</strong> Linux问题</li>
+        <li><strong>作者:</strong> norton</li>
         <li><strong>创建于
-                :</strong> 2023-12-04 16:02:50</li>
+                :</strong> 2023-12-12 20:18:39</li>
         
             <li>
                 <strong>更新于
-                    :</strong> 2023-12-04 16:02:52
+                    :</strong> 2023-12-12 20:18:04
             </li>
         
         <li>
-            <strong>链接:</strong> https://n0rton99.github.io/2023/12/04/hello-world/
+            <strong>链接:</strong> https://n0rton99.github.io/2023/12/12/Linux 问题/
         </li>
         <li>
             <strong>
@@ -450,27 +558,39 @@
         
 
         
+            <ul class="post-tags-box">
+                
+                    <li class="tag-item">
+                        <a href="/tags/Linux/">#Linux</a>&nbsp;
+                    </li>
+                
+                    <li class="tag-item">
+                        <a href="/tags/%E8%BF%90%E7%BB%B4/">#运维</a>&nbsp;
+                    </li>
+                
+            </ul>
+        
 
         
 
         
             <div class="article-nav my-8 flex justify-between items-center px-2 sm:px-6 md:px-8">
                 
-                    <div class="article-prev border-border-color shadow-redefine-flat shadow-shadow-color-2 rounded-medium px-4 py-2 hover:shadow-redefine-flat-hover hover:shadow-shadow-color-2">
-                        <a class="prev"
-                        rel="prev"
-                        href="/2023/12/12/Linux%20%E9%97%AE%E9%A2%98/"
+                
+                    <div class="article-next border-border-color shadow-redefine-flat shadow-shadow-color-2 rounded-medium px-4 py-2 hover:shadow-redefine-flat-hover hover:shadow-shadow-color-2">
+                        <a class="next"
+                        rel="next"
+                        href="/2023/12/04/hello-world/"
                         >
-                            <span class="left arrow-icon flex justify-center items-center">
-                                <i class="fa-solid fa-chevron-left"></i>
-                            </span>
                             <span class="title flex justify-center items-center">
-                                <span class="post-nav-title-item">Linux问题</span>
-                                <span class="post-nav-item">上一篇</span>
+                                <span class="post-nav-title-item">Hello World</span>
+                                <span class="post-nav-item">下一篇</span>
+                            </span>
+                            <span class="right arrow-icon flex justify-center items-center">
+                                <i class="fa-solid fa-chevron-right"></i>
                             </span>
                         </a>
                     </div>
-                
                 
             </div>
         
@@ -523,8 +643,8 @@
             <div class="post-toc-wrap">
     <div class="post-toc">
         <div class="toc-title">此页目录</div>
-        <div class="page-title">Hello World</div>
-        <ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Quick-Start"><span class="nav-text">Quick Start</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Create-a-new-post"><span class="nav-text">Create a new post</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Run-server"><span class="nav-text">Run server</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Generate-static-files"><span class="nav-text">Generate static files</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Deploy-to-remote-sites"><span class="nav-text">Deploy to remote sites</span></a></li></ol></li></ol>
+        <div class="page-title">Linux问题</div>
+        <ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%BD%91%E7%BB%9C%E9%97%AE%E9%A2%98%E6%8E%92%E6%9F%A5"><span class="nav-text">网络问题排查</span></a></li></ol>
 
     </div>
 </div>
