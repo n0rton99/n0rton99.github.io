@@ -114,9 +114,28 @@
       </tags>
   </entry>
   <entry>
+    <title>Hello World</title>
+    <url>/2023/12/04/hello-world/</url>
+    <content><![CDATA[<p>Welcome to <a class="link"   href="https://hexo.io/" >Hexo <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a>! This is your very first post. Check <a class="link"   href="https://hexo.io/docs/" >documentation <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a> for more info. If you get any problems when using Hexo, you can find the answer in <a class="link"   href="https://hexo.io/docs/troubleshooting.html" >troubleshooting <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a> or you can ask me on <a class="link"   href="https://github.com/hexojs/hexo/issues" >GitHub <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a>.</p>
+<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><div class="highlight-container" data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure></div>
+
+<p>More info: <a class="link"   href="https://hexo.io/docs/writing.html" >Writing <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a></p>
+<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><div class="highlight-container" data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure></div>
+
+<p>More info: <a class="link"   href="https://hexo.io/docs/server.html" >Server <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a></p>
+<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><div class="highlight-container" data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure></div>
+
+<p>More info: <a class="link"   href="https://hexo.io/docs/generating.html" >Generating <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a></p>
+<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><div class="highlight-container" data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure></div>
+
+<p>More info: <a class="link"   href="https://hexo.io/docs/one-command-deployment.html" >Deployment <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a></p>
+]]></content>
+  </entry>
+  <entry>
     <title>主机Ubuntu网络问题</title>
     <url>/2023/12/13/%E4%B8%BB%E6%9C%BAUbuntu%E7%BD%91%E7%BB%9C%E9%97%AE%E9%A2%98/</url>
     <content><![CDATA[<p>今天有幸与伙伴们处理了LuxAI 机器人一些网络环境配置上的问题，耗时一个白天( - - ||| )，属实是有点汗流浃背了，差点没搞出来，希望Ubuntu不要再抽风了哈哈哈哈。下面梳理一下今天遇到的问题，以防下次再出现类似问题，<strong>下面的指令都是在root用户的情况下输入的</strong>，非root用户请在指令前加个<strong>sudo do</strong>。</p>
+<p>PS. 有些参考资料需要翻墙，请大家自便</p>
 <h1 id="网络相关的硬件和软件配置"><a href="#网络相关的硬件和软件配置" class="headerlink" title="网络相关的硬件和软件配置"></a>网络相关的硬件和软件配置</h1><h2 id="网卡"><a href="#网卡" class="headerlink" title="网卡"></a>网卡</h2><div class="highlight-container" data-rel="Shell"><figure class="iseeu highlight shell"><table><tr><td class="code"><pre><span class="line">ifconfig</span><br></pre></td></tr></table></figure></div>
 
 <p>设备主要有两个网卡，一个有线网卡<strong>eth0</strong>，一个无线网卡<strong>wlan0</strong>，可以看出网卡对应的ip地址，有趣的是连手机热点的时候ip地址一般是192.168.xxx.xxx，校园网时则是不一样的</p>
@@ -126,11 +145,11 @@
 <p>永久的DNS修改</p>
 <div class="highlight-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="code"><pre><span class="line"># 方法一</span><br><span class="line">vim /etc/network/interfaces</span><br><span class="line"># INSERT 模式（按i or a键切换），加入下面一行的代码</span><br><span class="line">dns-nameservers xxx.xxx.xxx.xxx # dns服务器地址，114.114.114.114，或者 8.8.8.8</span><br><span class="line"></span><br><span class="line"># 方法二</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"># 方法三,这种没试过，一般前两种不行再试用第三种</span><br><span class="line">vim /etc/resolvconf/resolv.conf.d/base</span><br><span class="line"># INSERT 模式（按i or a键切换），加入下面一行的代码</span><br><span class="line">nameserver xxx.xxx.xxx.xxx</span><br><span class="line">nameserver xxx.xxx.xxx.xxx # dns服务器地址</span><br><span class="line"># 更新执行</span><br><span class="line">resolvconf -u</span><br></pre></td></tr></table></figure></div>
 
-<h1 id="网关"><a href="#网关" class="headerlink" title="网关"></a>网关</h1><p>查看所有的网关</p>
+<h2 id="网关"><a href="#网关" class="headerlink" title="网关"></a>网关</h2><p>查看所有的网关</p>
 <div class="highlight-container" data-rel="Shell"><figure class="iseeu highlight shell"><table><tr><td class="code"><pre><span class="line">route -n</span><br></pre></td></tr></table></figure></div>
 
 <p>一开始以为最没有问题的一part，结果反而是导致整个网络不能用的罪魁祸首</p>
-<h1 id="驱动"><a href="#驱动" class="headerlink" title="驱动"></a>驱动</h1><p>这一步查下来反而没有问题</p>
+<h2 id="驱动"><a href="#驱动" class="headerlink" title="驱动"></a>驱动</h2><p>这一步查下来反而没有问题</p>
 <div class="highlight-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="code"><pre><span class="line"># 查看网卡型号</span><br><span class="line">lspci | grep net</span><br><span class="line"></span><br><span class="line"># 驱动型号</span><br><span class="line">ethtool -i ethN # ethN是网卡型号，按照ifconfig得到的几个型号来查</span><br></pre></td></tr></table></figure></div>
 
 <h1 id="针对性问题"><a href="#针对性问题" class="headerlink" title="针对性问题"></a>针对性问题</h1><h2 id="NetworkManager启动"><a href="#NetworkManager启动" class="headerlink" title="NetworkManager启动"></a>NetworkManager启动</h2><div class="highlight-container" data-rel="Shell"><figure class="iseeu highlight shell"><table><tr><td class="code"><pre><span class="line">systemctl start network-manager</span><br><span class="line">systemctl stop network-manager</span><br><span class="line">systemctl restart network-manager</span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">移除network-manager的缓存文件，有时候会因为缓存文件的问题，导致修改的部分无法很好的运作</span></span><br><span class="line">rm /var/lib/NetworkManager/NetworkManager.state</span><br></pre></td></tr></table></figure></div>
@@ -138,7 +157,7 @@
 <h2 id="防火墙"><a href="#防火墙" class="headerlink" title="防火墙"></a>防火墙</h2><div class="highlight-container" data-rel="Shell"><figure class="iseeu highlight shell"><table><tr><td class="code"><pre><span class="line">ufw status</span><br></pre></td></tr></table></figure></div>
 
 <p>这一步没有问题，因为原先环境就是关掉防火墙的，Ubuntu也不用像Centos再去看SELinux的问题</p>
-<h2 id="netplan配置"><a href="#netplan配置" class="headerlink" title="netplan配置"></a>netplan配置</h2><p>今天我是对netplan加入有线网卡eth0的netplan配置，重启后可以体现在<strong>etc&#x2F;resolv.conf</strong>的dns中，这个修改操作属于<strong>永久性</strong><br>除此之外我还做了针对无线网卡wlan0的实验，加了<strong>access-points</strong>节点，尝试了指定wifi和password，但是直接出现了wifi图标直接不见的结果，吓得我赶紧做了波回溯操作，最后鉴定这波修改为<strong>无效</strong>（这一部分内容更具体的可以查netplan配置,讲得比我清楚，最后我也没用这种方法）</p>
+<h2 id="netplan配置"><a href="#netplan配置" class="headerlink" title="netplan配置"></a>netplan配置</h2><p>今天我是对netplan加入有线网卡eth0的netplan配置，重启后可以体现在<strong>etc&#x2F;resolv.conf</strong>的dns中，这个修改操作属于<strong>永久性</strong><br>除此之外我还做了针对无线网卡wlan0的实验，加了<strong>access-points</strong>节点，尝试了指定wifi和password，但是直接出现了wifi图标直接不见的结果，吓得我赶紧做了波回溯操作，最后鉴定这波修改为<strong>无效</strong>（这一部分内容更具体的可以查netplan配置，讲得比我清楚，最后我也没用这种方法）</p>
 <div class="highlight-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="code"><pre><span class="line"># 修改网卡的netplan</span><br><span class="line">vim /etc/netplan/01-xxxx.xxxx.yaml</span><br><span class="line"># 文件内包括有线网卡eth0和无线网卡wlan0的配置</span><br><span class="line">netplan generate</span><br><span class="line">netplan apply # 网络配置修改的应用</span><br></pre></td></tr></table></figure></div>
 
 <h2 id="时间戳"><a href="#时间戳" class="headerlink" title="时间戳"></a>时间戳</h2><p>拿到设备时发现系统时间跟标准时间差了10个小时，一开始做了以下操作</p>
@@ -157,11 +176,20 @@
 设置过后果然可以连上国内网站了，谢天谢地</li>
 <li>按照更换网关顺序，使用有线网络情况下提高eth0网关的顺序，使用无线网络情况下提高wlan0网关的顺序<div class="highlight-container" data-rel="Shell"><figure class="iseeu highlight shell"><table><tr><td class="code"><pre><span class="line">ifconfig [网卡型号] down/up #可以通过禁用启用的命令，调换优先级</span><br></pre></td></tr></table></figure></div></li>
 </ul>
+<p>参考资料：<br>1.<a class="link"   href="https://www.cnblogs.com/han-guang-xue/p/15140942.html" >linux多网卡,可以ping局域内网网关或是内网,ping不通外网 - 韩若明瞳 - 博客园 (cnblogs.com) <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a><br>2.<a class="link"   href="https://zhuanlan.zhihu.com/p/65480107" >Linux 中如何启用和禁用网卡？ - 知乎 (zhihu.com) <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a></p>
 <h3 id="翻墙"><a href="#翻墙" class="headerlink" title="翻墙"></a>翻墙</h3><p>翻墙主要是使用clash的Linux端进行翻墙，如果会配置vpn服务器的话可以搭一个自己弄（我是不会了，纯懒，paypal也没去弄，我真是…）<br>clash的作者删库跑路了，导致一些文档丢失，只能去翻别人的博客找找资源了，这一部分小伙伴下了安装包，我直接接下去使用了。<br>clash的config配置没问题，从自己买的会员那边下就ok，主要是配置之后上得了github，上不了YouTube，google等网站，查询资料后发现Ubuntu还要在Wifi Setting中设置Network Proxy</p>
 <div class="highlight-container" data-rel="Shell"><figure class="iseeu highlight shell"><table><tr><td class="code"><pre><span class="line"><span class="meta prompt_"># </span><span class="language-bash">这部分按照clash port边上的terminal粘贴板配置</span></span><br><span class="line">http --- 127.0.0.1 7890 # ip地址 端口</span><br><span class="line">https --- 127.0.0.1 7890</span><br><span class="line">socks --- 127.0.0.1 7891</span><br></pre></td></tr></table></figure></div>
 
-<p>设置好就能用了</p>
-<h2 id="Demo的环境配置"><a href="#Demo的环境配置" class="headerlink" title="Demo的环境配置"></a>Demo的环境配置</h2><p>主要是安装了python指定的一些包，包括对机器人操作的rospkg包等等，这部分直接按照demo给的README.md文件顺序干下来就行，demo的编译还没弄，一天全在搞网络了，真的难受</p>
+<p>参考资料：<br>1.<a class="link"   href="http://jemlab.cn/?p=141" >Ubuntu 配置clash （适用于所有版本）【转载】 – 芥末实验室 (jemlab.cn) <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a></p>
+<p>设置好就能用了<br><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://images-1303942840.cos.ap-shanghai.myqcloud.com/clash%20Linux%E8%AE%BE%E7%BD%AE.jpg"
+                     
+                ></p>
+<h3 id="wifi登录"><a href="#wifi登录" class="headerlink" title="wifi登录"></a>wifi登录</h3><p>这个问题主要是因为校园网有两个wifi，第一个需要输入账号密码，第二个是跳转网页然后输入账号密码<br>今天解决的是第二个的问题，连接<strong>对应名称的wifi</strong>，需要过段时间自动跳转到网页，输入账号密码既可以登录成功</p>
+<p>第一个的问题主要集中在如何在Linux中对wifi账号密码进行预设，Wifi Setting中输入了账号和密码，但是好像还是不行，这个问题可以联系学校管校园网的问一下具体的解决办法，也不清楚它的加密过程是咋样的</p>
+<h3 id="Demo的环境配置"><a href="#Demo的环境配置" class="headerlink" title="Demo的环境配置"></a>Demo的环境配置</h3><p>主要是安装了python指定的一些包，包括对机器人操作的rospkg包等等，这部分直接按照demo给的README.md文件顺序干下来就行，demo的编译还没弄，一天全在搞网络了，真的难受</p>
 <div class="highlight-container" data-rel="Shell"><figure class="iseeu highlight shell"><table><tr><td class="code"><pre><span class="line">pip3 install -r requirements.txt</span><br></pre></td></tr></table></figure></div>
 
 <p>接入gpt的API KEY，在openAI的platform平台申请，导入到yaml文件中</p>
@@ -176,23 +204,5 @@
         <tag>Ubuntu</tag>
         <tag>GPT</tag>
       </tags>
-  </entry>
-  <entry>
-    <title>Hello World</title>
-    <url>/2023/12/04/hello-world/</url>
-    <content><![CDATA[<p>Welcome to <a class="link"   href="https://hexo.io/" >Hexo <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a>! This is your very first post. Check <a class="link"   href="https://hexo.io/docs/" >documentation <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a> for more info. If you get any problems when using Hexo, you can find the answer in <a class="link"   href="https://hexo.io/docs/troubleshooting.html" >troubleshooting <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a> or you can ask me on <a class="link"   href="https://github.com/hexojs/hexo/issues" >GitHub <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><div class="highlight-container" data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure></div>
-
-<p>More info: <a class="link"   href="https://hexo.io/docs/writing.html" >Writing <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><div class="highlight-container" data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure></div>
-
-<p>More info: <a class="link"   href="https://hexo.io/docs/server.html" >Server <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><div class="highlight-container" data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure></div>
-
-<p>More info: <a class="link"   href="https://hexo.io/docs/generating.html" >Generating <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><div class="highlight-container" data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure></div>
-
-<p>More info: <a class="link"   href="https://hexo.io/docs/one-command-deployment.html" >Deployment <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a></p>
-]]></content>
   </entry>
 </search>
