@@ -13,23 +13,25 @@
     
     <!--- Seo Part-->
     
-    <link rel="canonical" href="https://georgechan95.github.io/2023/12/12/linux 问题/"/>
+    <link rel="canonical" href="https://georgechan95.github.io/2023/12/13/主机ubuntu网络问题/"/>
     <meta name="robots" content="index,follow">
     <meta name="googlebot" content="index,follow">
     <meta name="revisit-after" content="1 days">
     
-        <meta name="description" content="网络问题排查目录1.[[Linux 问题#网络不通]]  [[Linux 问题#链路是否连通]] [[Linux 问题#网卡是否正常启用]] [[Linux 问题#是否正确设置网关]] [[Linux 问题#DNS工作状况]] [[Linux 问题#是否可以正常路由到远程主机]] [[Linux 问题#远程主机是否开放端口]] [[Linux 问题#本机查看监听端口]] [[Linux 问题#查看">
+        <meta name="description" content="今天有幸与伙伴们处理了LuxAI 机器人一些网络环境配置上的问题，耗时一个白天( - - ||| )，属实是有点汗流浃背了，差点没搞出来，希望Ubuntu不要再抽风了哈哈哈哈。下面梳理一下今天遇到的问题，以防下次再出现类似问题，下面的指令都是在root用户的情况下输入的，非root用户请在指令前加个sudo do。 网络相关的硬件和软件配置网卡1ifconfig  设备主要有两个网卡，一个有线网卡">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Linux问题">
-<meta property="og:url" content="https://georgechan95.github.io/2023/12/12/Linux%20%E9%97%AE%E9%A2%98/index.html">
+<meta property="og:title" content="主机Ubuntu网络问题">
+<meta property="og:url" content="https://georgechan95.github.io/2023/12/13/%E4%B8%BB%E6%9C%BAUbuntu%E7%BD%91%E7%BB%9C%E9%97%AE%E9%A2%98/index.html">
 <meta property="og:site_name" content="Hexo">
-<meta property="og:description" content="网络问题排查目录1.[[Linux 问题#网络不通]]  [[Linux 问题#链路是否连通]] [[Linux 问题#网卡是否正常启用]] [[Linux 问题#是否正确设置网关]] [[Linux 问题#DNS工作状况]] [[Linux 问题#是否可以正常路由到远程主机]] [[Linux 问题#远程主机是否开放端口]] [[Linux 问题#本机查看监听端口]] [[Linux 问题#查看">
+<meta property="og:description" content="今天有幸与伙伴们处理了LuxAI 机器人一些网络环境配置上的问题，耗时一个白天( - - ||| )，属实是有点汗流浃背了，差点没搞出来，希望Ubuntu不要再抽风了哈哈哈哈。下面梳理一下今天遇到的问题，以防下次再出现类似问题，下面的指令都是在root用户的情况下输入的，非root用户请在指令前加个sudo do。 网络相关的硬件和软件配置网卡1ifconfig  设备主要有两个网卡，一个有线网卡">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2023-12-12T12:18:39.490Z">
-<meta property="article:modified_time" content="2023-12-12T12:18:04.000Z">
+<meta property="article:published_time" content="2023-12-13T14:07:56.930Z">
+<meta property="article:modified_time" content="2023-12-13T14:07:48.000Z">
 <meta property="article:author" content="John Doe">
 <meta property="article:tag" content="Linux">
-<meta property="article:tag" content="运维">
+<meta property="article:tag" content="ROS">
+<meta property="article:tag" content="Ubuntu">
+<meta property="article:tag" content="GPT">
 <meta name="twitter:card" content="summary">
     
     
@@ -42,7 +44,7 @@
     
     <title>
         
-            Linux问题 -
+            主机Ubuntu网络问题 -
         
         Norton&#39;s Blog
     </title>
@@ -346,7 +348,7 @@
         <div class="article-title relative w-full">
             
                 <div class="w-full flex items-center pt-6 justify-start">
-                    <h1 class="article-title-regular text-second-text-color text-4xl md:text-6xl font-bold px-2 sm:px-6 md:px-8 py-3">Linux问题</h1>
+                    <h1 class="article-title-regular text-second-text-color text-4xl md:text-6xl font-bold px-2 sm:px-6 md:px-8 py-3">主机Ubuntu网络问题</h1>
                 </div>
             
             </div>
@@ -358,7 +360,7 @@
                 </div>
                 <div class="info flex flex-col justify-between">
                     <div class="author flex items-center">
-                        <span class="name text-default-text-color text-lg font-semibold">norton</span>
+                        <span class="name text-default-text-color text-lg font-semibold">n0rton99</span>
                         
                             <span class="author-label ml-1.5 text-xs px-2 py-0.5 rounded-small text-third-text-color border border-shadow-color-1">Lv1</span>
                         
@@ -367,15 +369,15 @@
                         <div class="article-meta-info">
     <span class="article-date article-meta-item">
         <i class="fa-regular fa-pen-fancy"></i>&nbsp;
-        <span class="desktop">2023-12-12 20:18:39</span>
-        <span class="mobile">2023-12-12 20:18:39</span>
+        <span class="desktop">2023-12-13 22:07:56</span>
+        <span class="mobile">2023-12-13 22:07:56</span>
         <span class="hover-info">创建</span>
     </span>
     
         <span class="article-date article-meta-item">
             <i class="fa-regular fa-wrench"></i>&nbsp;
-            <span class="desktop">2023-12-12 20:18:04</span>
-            <span class="mobile">2023-12-12 20:18:04</span>
+            <span class="desktop">2023-12-13 22:07:48</span>
+            <span class="mobile">2023-12-13 22:07:48</span>
             <span class="hover-info">更新</span>
         </span>
     
@@ -391,7 +393,15 @@
                     </li>
                 
                     <li>
-                        | <a href="/tags/%E8%BF%90%E7%BB%B4/">运维</a>&nbsp;
+                        | <a href="/tags/ROS/">ROS</a>&nbsp;
+                    </li>
+                
+                    <li>
+                        | <a href="/tags/Ubuntu/">Ubuntu</a>&nbsp;
+                    </li>
+                
+                    <li>
+                        | <a href="/tags/GPT/">GPT</a>&nbsp;
                     </li>
                 
             </ul>
@@ -417,110 +427,59 @@
 
 
         <div class="article-content markdown-body px-2 sm:px-6 md:px-8 pb-8">
-            <h3 id="网络问题排查"><a href="#网络问题排查" class="headerlink" title="网络问题排查"></a>网络问题排查</h3><h4 id="目录"><a href="#目录" class="headerlink" title="目录"></a>目录</h4><p>1.[[Linux 问题#网络不通]]</p>
-<ul>
-<li>[[Linux 问题#链路是否连通]]</li>
-<li>[[Linux 问题#网卡是否正常启用]]</li>
-<li>[[Linux 问题#是否正确设置网关]]</li>
-<li>[[Linux 问题#DNS工作状况]]</li>
-<li>[[Linux 问题#是否可以正常路由到远程主机]]</li>
-<li>[[Linux 问题#远程主机是否开放端口]]</li>
-<li>[[Linux 问题#本机查看监听端口]]</li>
-<li>[[Linux 问题#查看防火墙规则]]<br>2.[[Linux 问题#网络速度慢]]<br>3.[[Linux 问题#网络排查思路]]</li>
-</ul>
-<h4 id="网络不通"><a href="#网络不通" class="headerlink" title="网络不通"></a>网络不通</h4><p>如果是网络不通，要定位具体的问题，一般是不断尝试排除不可能故障的地方，最终定位问题根源。一般需要查看</p>
-<ul>
-<li>是否接入到链路    ethtool  eth0</li>
-<li>是否启用了相应的网卡   ifconfig  eth1</li>
-<li>本地网络是否连接   route  -n查看gateway网关，然后再ping  网关</li>
-<li>DNS故障    nslookup   域名&#x2F;ip</li>
-<li>能否路由到目标主机    traceroute <a class="link"   target="_blank" rel="noopener" href="http://www.baidu.com/" >www.baidu.com <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a></li>
-<li>远程端口是否开放    nmap -p 22  220.181.111.188 </li>
-<li>本机查看监听端口   netstat -lnp | grep 端口号</li>
-<li>查看防火墙规则   iptables -L  或  SELinux</li>
-</ul>
-<p>一般来说当存在网络不通的故障时，访问出端和入端的信息是我们都要收集的，目的在于确定问题所在的主机或者区段。假如a不能访问c而b能够访问c，那么很明显问题出在a或a到c的网络上，而通过同一子网中的几台机器a、b可以正常访问网络，却不能访问c，那么可能是这个网络到c存在题，或c存在问题。定位了问题所在的主机，一般有一些步骤来逐渐缩小问题范围，最终定位问题：</p>
-<h5 id="链路是否连通"><a href="#链路是否连通" class="headerlink" title="链路是否连通"></a>链路是否连通</h5><p>即检查网卡与网络是否<strong>物理连通</strong>，网线是否插好且连接可用，很多时候不能立刻到机房确定物理连接，可以用命令：</p>
-<div class="highlight-container" data-rel="Shell"><figure class="iseeu highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ethtool ethN    #ehtN是连接到故障网络的网卡</span><br></pre></td></tr></table></figure></div>
+            <p>今天有幸与伙伴们处理了LuxAI 机器人一些网络环境配置上的问题，耗时一个白天( - - ||| )，属实是有点汗流浃背了，差点没搞出来，希望Ubuntu不要再抽风了哈哈哈哈。下面梳理一下今天遇到的问题，以防下次再出现类似问题，<strong>下面的指令都是在root用户的情况下输入的</strong>，非root用户请在指令前加个<strong>sudo do</strong>。</p>
+<h1 id="网络相关的硬件和软件配置"><a href="#网络相关的硬件和软件配置" class="headerlink" title="网络相关的硬件和软件配置"></a>网络相关的硬件和软件配置</h1><h2 id="网卡"><a href="#网卡" class="headerlink" title="网卡"></a>网卡</h2><div class="highlight-container" data-rel="Shell"><figure class="iseeu highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ifconfig</span><br></pre></td></tr></table></figure></div>
 
-<blockquote>
-<p>例1：使用ethtool 查看 ens33 的物理连接<br>其中，speed显示了当前网卡的速度，这是一个千兆网卡；<br>Duplex显示了当前网络支持全双工；<br>Link detected显示当前网卡和网络的物理连接正常。<br>通常网速和全&#x2F;半双工状态是主机和网络协议商自动协商的，<br>例如这里第8行的 auto-negotiation。如果发现15行的双工被设置成了Half，可以手动将其改为全双工网络：<br>ethtool -s ens33 autoneg off duplex full</p>
-</blockquote>
-<h5 id="网卡是否正常启用"><a href="#网卡是否正常启用" class="headerlink" title="网卡是否正常启用"></a>网卡是否正常启用</h5><p>一般网络物理连接故障的情况并不多见，当排除物理连接上的问题后，需要进一步查看网卡的工作状态。</p>
-<div class="highlight-container" data-rel="Shell"><figure class="iseeu highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ifconfig ensN #ensN是网卡编号</span><br></pre></td></tr></table></figure></div>
+<p>设备主要有两个网卡，一个有线网卡<strong>eth0</strong>，一个无线网卡<strong>wlan0</strong>，可以看出网卡对应的ip地址，有趣的是连手机热点的时候ip地址一般是192.168.xxx.xxx，校园网时则是不一样的</p>
+<h2 id="DNS"><a href="#DNS" class="headerlink" title="DNS"></a>DNS</h2><p>临时的DNS修改</p>
+<div class="highlight-container" data-rel="Shell"><figure class="iseeu highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cat /etc/resolv.conf</span><br></pre></td></tr></table></figure></div>
 
-<p>例2：使用ifconfig命令检查网卡ens33状态</p>
-<blockquote>
-<p>inet:IP地址<br>netmask:子网掩码<br>broadcast:<br>网络收发的字节数、包数、错误数以及丢包情况，特别是 TX 和 RX 部分的 errors、dropped、overruns、carrier 以及 collisions 等指标不为 0 时，通常表示出现了网络 I&#x2F;O 问题。其中：<br>errors 表示发生错误的数据包数，比如校验错误、帧同步错误等；<br>dropped 表示丢弃的数据包数，即数据包已经收到了 Ring Buffer，但因为内存不足等原因丢包；overruns 表示超限数据包数，即网络 I&#x2F;O 速度过快，导致 Ring Buffer 中的数据包来不及处理（队列满）而导致的丢包；<br>carrier 表示发生 carrirer 错误的数据包数，比如双工模式不匹配、物理电缆出现问题等；collisions 表示碰撞数据包数。</p>
-</blockquote>
-<h5 id="是否正确设置网关"><a href="#是否正确设置网关" class="headerlink" title="是否正确设置网关"></a>是否正确设置网关</h5><p>如果网卡已经正常启动，需要确认目标网络接口是否正确配置网关，同时主机和网关之间的连接没有问题，通过route命令和ping命令结合完成这一阶段的排查。</p>
+<p>永久的DNS修改</p>
+<div class="highlight-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"># 方法一</span><br><span class="line">vim /etc/network/interfaces</span><br><span class="line"># INSERT 模式（按i or a键切换），加入下面一行的代码</span><br><span class="line">dns-nameservers xxx.xxx.xxx.xxx # dns服务器地址，114.114.114.114，或者 8.8.8.8</span><br><span class="line"></span><br><span class="line"># 方法二</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"># 方法三,这种没试过，一般前两种不行再试用第三种</span><br><span class="line">vim /etc/resolvconf/resolv.conf.d/base</span><br><span class="line"># INSERT 模式（按i or a键切换），加入下面一行的代码</span><br><span class="line">nameserver xxx.xxx.xxx.xxx</span><br><span class="line">nameserver xxx.xxx.xxx.xxx # dns服务器地址</span><br><span class="line"># 更新执行</span><br><span class="line">resolvconf -u</span><br></pre></td></tr></table></figure></div>
+
+<h1 id="网关"><a href="#网关" class="headerlink" title="网关"></a>网关</h1><p>查看所有的网关</p>
 <div class="highlight-container" data-rel="Shell"><figure class="iseeu highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">route -n</span><br></pre></td></tr></table></figure></div>
 
-<p>例3 使用route 命令查看内核路由表</p>
-<blockquote>
-<p>route -n 以IP而不是主机名的形式显示网关等信息，一方面更快，另一方面不涉及DNS，通过route命令查看内核路由，检验具体的网卡是否连接到目标网路的路由，之后就可以尝试ping 网关，排查与网关之间的连接。<br><strong>如果无法ping通网关，可能是网关限制了ICMP数据包，或者交换机设置的问题</strong></p>
-</blockquote>
-<h5 id="DNS工作状况"><a href="#DNS工作状况" class="headerlink" title="DNS工作状况"></a>DNS工作状况</h5><p>通常很多网络问题是DNS故障或配置不当造成的，nslookup和dig命令能够用来排查DNS问题。例4. 使用nslookup命令查看DNS解析</p>
-<div class="highlight-container" data-rel="Shell"><figure class="iseeu highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">nslookup xxx #xxx可以是域名也可以是ip地址</span><br></pre></td></tr></table></figure></div>
+<p>一开始以为最没有问题的一part，结果反而是导致整个网络不能用的罪魁祸首</p>
+<h1 id="驱动"><a href="#驱动" class="headerlink" title="驱动"></a>驱动</h1><p>这一步查下来反而没有问题</p>
+<div class="highlight-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"># 查看网卡型号</span><br><span class="line">lspci | grep net</span><br><span class="line"></span><br><span class="line"># 驱动型号</span><br><span class="line">ethtool -i ethN # ethN是网卡型号，按照ifconfig得到的几个型号来查</span><br></pre></td></tr></table></figure></div>
 
-<blockquote>
-<p>这里的DNS服务器 192.168.20.2位于当前局域网内，nslookup的结果显示DNS工作正常。如果这里nslookup命令无法解析目标域名，则很有可能是DNS配置不当，到&#x2F;etc&#x2F;resolv.conf文件中查看是否存在域名服务器的配置：</p>
-</blockquote>
-<div class="highlight-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"># resolv.conf的内容</span><br><span class="line"># Generated by NetworkManager</span><br><span class="line">search localdomain # DNS配置</span><br><span class="line">nameserver 8.8.8.8 # 配置的DNS服务器地址</span><br></pre></td></tr></table></figure></div>
+<h1 id="针对性问题"><a href="#针对性问题" class="headerlink" title="针对性问题"></a>针对性问题</h1><h2 id="NetworkManager启动"><a href="#NetworkManager启动" class="headerlink" title="NetworkManager启动"></a>NetworkManager启动</h2><div class="highlight-container" data-rel="Shell"><figure class="iseeu highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">systemctl start network-manager</span><br><span class="line">systemctl stop network-manager</span><br><span class="line">systemctl restart network-manager</span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">移除network-manager的缓存文件，有时候会因为缓存文件的问题，导致修改的部分无法很好的运作</span></span><br><span class="line">rm /var/lib/NetworkManager/NetworkManager.state</span><br></pre></td></tr></table></figure></div>
 
-<p>例5 及时生效的DNS配置——&#x2F;etc&#x2F;resolv.conf文件</p>
-<blockquote>
-<p>&#x2F;etc&#x2F;resolv.conf文件是临时即刻生效的DNS服务器配置。<br>如果我们的DNS服务器在一个子网内，而无法ping通它，这个DNS服务器很可能已经宕机。</p>
-</blockquote>
-<h5 id="是否可以正常路由到远程主机"><a href="#是否可以正常路由到远程主机" class="headerlink" title="是否可以正常路由到远程主机"></a>是否可以正常路由到远程主机</h5><p>互联网是通过大量路由器中继连接起来的，网络的访问就是在这些节点间一跳一跳最终到达目的地，想要查看网络连接，最直接最常用的命令是ping，ping得通，说明路由工作正常，但是<strong>如果ping不通，traceroute命令可以查看从当前主机到目标主机的全部“跳”的过程</strong>。<br>traceroute和ping命令都是使用ICMP协议包。</p>
-<div class="highlight-container" data-rel="Shell"><figure class="iseeu highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">traceroute xxx #xxx是IP地址或者域名</span><br></pre></td></tr></table></figure></div>
+<h2 id="防火墙"><a href="#防火墙" class="headerlink" title="防火墙"></a>防火墙</h2><div class="highlight-container" data-rel="Shell"><figure class="iseeu highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ufw status</span><br></pre></td></tr></table></figure></div>
 
-<blockquote>
-<p>例7. 使用traceroute追踪路由状况<br>traceroute可以查看网络中继在哪里中断或者网络延时情况，是因为网络不通或者某个网关限制了ICMP协议包。</p>
-</blockquote>
-<h5 id="远程主机是否开放端口"><a href="#远程主机是否开放端口" class="headerlink" title="远程主机是否开放端口"></a>远程主机是否开放端口</h5><p><strong>telnet命令</strong>是检查<strong>端口开放</strong>情况的利器，或者<strong>nmap工具</strong></p>
-<p>centos7中需先安装telnet命令<br>    yum list telnet*              列出telnet相关的安装包<br>    yum install telnet-server          安装telnet服务<br>    yum install telnet.*           安装telnet客户端</p>
-<div class="highlight-container" data-rel="Shell"><figure class="iseeu highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">telnet DOMAIN/IP PORT </span><br></pre></td></tr></table></figure></div>
+<p>这一步没有问题，因为原先环境就是关掉防火墙的，Ubuntu也不用像Centos再去看SELinux的问题</p>
+<h2 id="netplan配置"><a href="#netplan配置" class="headerlink" title="netplan配置"></a>netplan配置</h2><p>今天我是对netplan加入有线网卡eth0的netplan配置，重启后可以体现在<strong>etc&#x2F;resolv.conf</strong>的dns中，这个修改操作属于<strong>永久性</strong><br>除此之外我还做了针对无线网卡wlan0的实验，加了<strong>access-points</strong>节点，尝试了指定wifi和password，但是直接出现了wifi图标直接不见的结果，吓得我赶紧做了波回溯操作，最后鉴定这波修改为<strong>无效</strong>（这一部分内容更具体的可以查netplan配置,讲得比我清楚，最后我也没用这种方法）</p>
+<div class="highlight-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"># 修改网卡的netplan</span><br><span class="line">vim /etc/netplan/01-xxxx.xxxx.yaml</span><br><span class="line"># 文件内包括有线网卡eth0和无线网卡wlan0的配置</span><br><span class="line">netplan generate</span><br><span class="line">netplan apply # 网络配置修改的应用</span><br></pre></td></tr></table></figure></div>
 
-<p>例8. 使用telnet检测远程主机的端口开放情况</p>
-<blockquote>
-<p>telnet IP PORT，可以查看指定远程主机是否开放目标端口，这里百度的前端服务器开放80端口是网页服务必须的。<br>但是telnet 命令的功能非常有限，当防火墙存在时，就不能很好地显示结果，所以telnet无法连接包含两种可能：1是端口确实没有开放，2是防火墙过滤了连接。<br>例如我们尝试 telnet 连接百度前端服务器的 22 端口：<br>无法继续进行，但是我们无法判断究竟是端口没有开放，还是被防火墙给拦截了，这时使用nmap工具将更加强大：</p>
-</blockquote>
-<p>例9. 使用nmap工具检测端口开放情况</p>
-<blockquote>
-<p>同样的服务器，使用nmap检测，观察到第7行，说明实际上该服务器是启用了22端口的，但是防火墙过滤了数据包，如果端口真的没有启用，那么第7行的STATE将显示closed，而不是filtered。开放的端口其状态将是open。<br>这时就可以了解，端口无法连接的原因是端口关闭还是防火墙过滤了。</p>
-</blockquote>
-<h5 id="本机查看监听端口"><a href="#本机查看监听端口" class="headerlink" title="本机查看监听端口"></a>本机查看监听端口</h5><p>如果要在本地查看某个端口是否开放，可以使用如下命令：</p>
-<div class="highlight-container" data-rel="Shell"><figure class="iseeu highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">netstat -lnp | grep PORT</span><br></pre></td></tr></table></figure></div>
-<p>其中，参数：<br>-l，显示正在监听的套接字<br>-p，显示套接字所属的进程ID和进程名<br>-n，以数字形式显示地址</p>
-<p>例10. 查看本地指定端口的监听情况</p>
-<blockquote>
-<p>netstat -lnp | grep :11211<br>Proto Recv-Q Send-Q Local Address           Foreign Address         State       PID&#x2F;Program name<br>tcp        0      0 10.0.0.11:11211         0.0.0.0:*               LISTEN      28911&#x2F;memcached<br>udp        0      0 10.0.0.11:11211         0.0.0.0:*                           28911&#x2F;memcached</p>
-</blockquote>
-<p>例10以memcached服务为例，查看当前活动端口监听的网络，如果netstat找不到指定的端口，说明没有进程在监听指定端口。</p>
-<blockquote>
-<p>其中第一列是套接字通信协议，第2列和第3列显示的是接收和发送队列，第4列是主机监听的本地地址，反映了该套接字监听的网络；第6列显示当前套接字的状态，最后一列显示打开端口的进程。</p>
-</blockquote>
-<h5 id="查看防火墙规则"><a href="#查看防火墙规则" class="headerlink" title="查看防火墙规则"></a>查看防火墙规则</h5><p>使用 iptables -L 命令查看当前主机的防火墙。</p>
-<div class="highlight-container" data-rel="Shell"><figure class="iseeu highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">iptables -L </span><br></pre></td></tr></table></figure></div>
+<h2 id="时间戳"><a href="#时间戳" class="headerlink" title="时间戳"></a>时间戳</h2><p>拿到设备时发现系统时间跟标准时间差了10个小时，一开始做了以下操作</p>
+<div class="highlight-container" data-rel="Shell"><figure class="iseeu highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">date # 查看本机时间</span><br><span class="line">date -s year:month:day # 临时修改系统时间</span><br><span class="line"><span class="meta prompt_"></span></span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">据说是修改硬件时间来达到同步，但是时间再重启之后还是变化了，所以最终这个问题也搁置了，不知道是不是少了什么指令</span></span><br><span class="line">hwclock --set --date &#x27;year:month:day&#x27; # 修改硬件时间</span><br><span class="line">hwclock -hctosys # 同步系统时间和硬件时间</span><br><span class="line">hwclock -w # 可能是少了这一步？也许加上就能保证不用再修改了吧</span><br><span class="line"><span class="meta prompt_"></span></span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">ntp同步</span></span><br><span class="line">apt-get install ntpdate #连接ntp服务器获取上面的标准时间来达到同步</span><br><span class="line">ntpdate ntp服务器地址 #试了几个国内ntp服务器地址都不行，连接不上，不清楚啥问题</span><br><span class="line"><span class="meta prompt_"></span></span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">timedatectl 时区修改指令(此方法最后有效，但是没试过重启会不会重置</span></span><br><span class="line">timedate list-timezones # 列出所有时区，发现东八区没有北京时区，有上海，就用上海了</span><br><span class="line">timedatectl set-timezone Asia/Shanghai</span><br></pre></td></tr></table></figure></div>
 
-<h4 id="网络速度慢"><a href="#网络速度慢" class="headerlink" title="网络速度慢"></a>网络速度慢</h4><p>一般有以下几个方式定位问题源：</p>
+<p>参考内容：<br><a class="link"   target="_blank" rel="noopener" href="https://www.niuqi360.com/linux/set-up-time-synchronization-on-ubuntu-20-04/" >如何在 Ubuntu 20.04 上设置时间同步-牛奇网 (niuqi360.com) <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a></p>
+<h2 id="不能连上网"><a href="#不能连上网" class="headerlink" title="不能连上网"></a>不能连上网</h2><p>这里的解决主要是分为两个部分，一个是连接上国内的网站，一个是通过<strong>tizi</strong>上国外的某些网站，</p>
+<h3 id="互联网"><a href="#互联网" class="headerlink" title="互联网"></a>互联网</h3><p>这边经过<strong>ping</strong>指令后发现，ping eth0和wlan0网卡ip地址都ping得通，其次ping两个网卡的网关也ping得通。接下来问题就来了，局域网内任意ping通，ping 百度ip和域名都ping不通，为了这问题思前想后，直到下午看到一篇博客才解决，oh god，属于是柳暗花明又一村了</p>
+<p>这个博客主要是提出多网卡情况下，数据包流向的问题，简述一下就是：</p>
+<blockquote>
+<p>route -n 中的信息表明：<br>    ip -&gt; 0.0.0.0 表明该ip网段的数据包会从<strong>对应的网卡</strong>发送出去<br>    0.0.0.0 -&gt; ip 表明发送到所有的数据包都从<strong>所属的网卡</strong>中发送到指定的ip地址<br>这就是两者的区别，而有线网卡eth0和无线网卡wlan0中，eth0被排在的了前面，导致eth0的优先级拉高，数据包优先发往该网卡指定的ip地址<br>在我们的实际操作中，eth0其实是<strong>没有被使用</strong>的，所以导致数据包被发往了无法接收的ip地址</p>
+</blockquote>
+<p>这边就出现了两种解决方法</p>
 <ul>
-<li>DNS是否是问题的源头： dig 或  nslookup</li>
-<li>查看路由过程中哪些节点是瓶颈：traceroute  查看网络中每一跳的延时，定位延时最高的网络区段</li>
-<li>查看带宽的使用情况：iftop 查看哪些网络连接占用的带宽较多</li>
-<li>使用命令tcpdump</li>
+<li>直接禁用eth0,只留wlan0(这一次使用的是这个方案，因为没看到有水晶头的插口，也不清楚转接口是否能够使用)<div class="highlight-container" data-rel="Shell"><figure class="iseeu highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ifconfig [网卡型号] down/up #down为禁用，up为启用</span><br></pre></td></tr></table></figure></div>
+设置过后果然可以连上国内网站了，谢天谢地</li>
+<li>按照更换网关顺序，使用有线网络情况下提高eth0网关的顺序，使用无线网络情况下提高wlan0网关的顺序<div class="highlight-container" data-rel="Shell"><figure class="iseeu highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ifconfig [网卡型号] down/up #可以通过禁用启用的命令，调换优先级</span><br></pre></td></tr></table></figure></div></li>
 </ul>
-<h4 id="网络排查思路"><a href="#网络排查思路" class="headerlink" title="网络排查思路"></a>网络排查思路</h4><ul>
-<li>网卡是否工作，包括硬件和驱动：lspci，dmesg</li>
-<li>IP参数是否正确设置：ifconfig</li>
-<li>局域网内通信是否正常：ping</li>
-<li>路由信息是否正常：route -n</li>
-<li>DNS状态：dig, nslookup</li>
-<li>路由节点状况与延时：traceroute</li>
-<li>服务监听端口：netstat -lnp</li>
-<li>防火墙：iptables, SELinux</li>
-</ul>
+<h3 id="翻墙"><a href="#翻墙" class="headerlink" title="翻墙"></a>翻墙</h3><p>翻墙主要是使用clash的Linux端进行翻墙，如果会配置vpn服务器的话可以搭一个自己弄（我是不会了，纯懒，paypal也没去弄，我真是…）<br>clash的作者删库跑路了，导致一些文档丢失，只能去翻别人的博客找找资源了，这一部分小伙伴下了安装包，我直接接下去使用了。<br>clash的config配置没问题，从自己买的会员那边下就ok，主要是配置之后上得了github，上不了YouTube，google等网站，查询资料后发现Ubuntu还要在Wifi Setting中设置Network Proxy</p>
+<div class="highlight-container" data-rel="Shell"><figure class="iseeu highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta prompt_"># </span><span class="language-bash">这部分按照clash port边上的terminal粘贴板配置</span></span><br><span class="line">http --- 127.0.0.1 7890 # ip地址 端口</span><br><span class="line">https --- 127.0.0.1 7890</span><br><span class="line">socks --- 127.0.0.1 7891</span><br></pre></td></tr></table></figure></div>
+
+<p>设置好就能用了</p>
+<h2 id="Demo的环境配置"><a href="#Demo的环境配置" class="headerlink" title="Demo的环境配置"></a>Demo的环境配置</h2><p>主要是安装了python指定的一些包，包括对机器人操作的rospkg包等等，这部分直接按照demo给的README.md文件顺序干下来就行，demo的编译还没弄，一天全在搞网络了，真的难受</p>
+<div class="highlight-container" data-rel="Shell"><figure class="iseeu highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pip3 install -r requirements.txt</span><br></pre></td></tr></table></figure></div>
+
+<p>接入gpt的API KEY，在openAI的platform平台申请，导入到yaml文件中</p>
+<div class="highlight-container" data-rel="Python"><figure class="iseeu highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">key = <span class="string">&quot;my-chatgpt-key&quot;</span></span><br><span class="line">prompt = <span class="string">&quot;&quot;</span> <span class="comment"># 这个不知道在干嘛的，可以问问公司</span></span><br></pre></td></tr></table></figure></div>
+
+<p>最后应该是按照CMakeList.txt编译文件里，这部分没弄，不清楚细节，加上<strong>catklin_make</strong>也不熟是在干嘛的，要查查资料补充一下了</p>
+<h1 id="补充"><a href="#补充" class="headerlink" title="补充"></a>补充</h1><p>梳理项目的demo也许可以做一些特殊客制化的服务，可塑性强，加上一些gpt4.0的图像生成技术，可以在某些领域使用</p>
 
         </div>
 
@@ -528,18 +487,18 @@
             <div class="post-copyright-info my-8 px-2 sm:px-6 md:px-8">
                 <div class="article-copyright-info-container">
     <ul>
-        <li><strong>标题:</strong> Linux问题</li>
-        <li><strong>作者:</strong> norton</li>
+        <li><strong>标题:</strong> 主机Ubuntu网络问题</li>
+        <li><strong>作者:</strong> n0rton99</li>
         <li><strong>创建于
-                :</strong> 2023-12-12 20:18:39</li>
+                :</strong> 2023-12-13 22:07:56</li>
         
             <li>
                 <strong>更新于
-                    :</strong> 2023-12-12 20:18:04
+                    :</strong> 2023-12-13 22:07:48
             </li>
         
         <li>
-            <strong>链接:</strong> https://n0rton99.github.io/2023/12/12/Linux 问题/
+            <strong>链接:</strong> https://n0rton99.github.io/2023/12/13/主机Ubuntu网络问题/
         </li>
         <li>
             <strong>
@@ -565,7 +524,15 @@
                     </li>
                 
                     <li class="tag-item">
-                        <a href="/tags/%E8%BF%90%E7%BB%B4/">#运维</a>&nbsp;
+                        <a href="/tags/ROS/">#ROS</a>&nbsp;
+                    </li>
+                
+                    <li class="tag-item">
+                        <a href="/tags/Ubuntu/">#Ubuntu</a>&nbsp;
+                    </li>
+                
+                    <li class="tag-item">
+                        <a href="/tags/GPT/">#GPT</a>&nbsp;
                     </li>
                 
             </ul>
@@ -576,29 +543,14 @@
         
             <div class="article-nav my-8 flex justify-between items-center px-2 sm:px-6 md:px-8">
                 
-                    <div class="article-prev border-border-color shadow-redefine-flat shadow-shadow-color-2 rounded-medium px-4 py-2 hover:shadow-redefine-flat-hover hover:shadow-shadow-color-2">
-                        <a class="prev"
-                        rel="prev"
-                        href="/2023/12/13/%E4%B8%BB%E6%9C%BAUbuntu%E7%BD%91%E7%BB%9C%E9%97%AE%E9%A2%98/"
-                        >
-                            <span class="left arrow-icon flex justify-center items-center">
-                                <i class="fa-solid fa-chevron-left"></i>
-                            </span>
-                            <span class="title flex justify-center items-center">
-                                <span class="post-nav-title-item">主机Ubuntu网络问题</span>
-                                <span class="post-nav-item">上一篇</span>
-                            </span>
-                        </a>
-                    </div>
-                
                 
                     <div class="article-next border-border-color shadow-redefine-flat shadow-shadow-color-2 rounded-medium px-4 py-2 hover:shadow-redefine-flat-hover hover:shadow-shadow-color-2">
                         <a class="next"
                         rel="next"
-                        href="/2023/12/04/hello-world/"
+                        href="/2023/12/12/Linux%20%E9%97%AE%E9%A2%98/"
                         >
                             <span class="title flex justify-center items-center">
-                                <span class="post-nav-title-item">Hello World</span>
+                                <span class="post-nav-title-item">Linux问题</span>
                                 <span class="post-nav-item">下一篇</span>
                             </span>
                             <span class="right arrow-icon flex justify-center items-center">
@@ -658,8 +610,8 @@
             <div class="post-toc-wrap">
     <div class="post-toc">
         <div class="toc-title">此页目录</div>
-        <div class="page-title">Linux问题</div>
-        <ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%BD%91%E7%BB%9C%E9%97%AE%E9%A2%98%E6%8E%92%E6%9F%A5"><span class="nav-text">网络问题排查</span></a></li></ol>
+        <div class="page-title">主机Ubuntu网络问题</div>
+        <ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E7%BD%91%E7%BB%9C%E7%9B%B8%E5%85%B3%E7%9A%84%E7%A1%AC%E4%BB%B6%E5%92%8C%E8%BD%AF%E4%BB%B6%E9%85%8D%E7%BD%AE"><span class="nav-text">网络相关的硬件和软件配置</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%BD%91%E5%8D%A1"><span class="nav-text">网卡</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#DNS"><span class="nav-text">DNS</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E7%BD%91%E5%85%B3"><span class="nav-text">网关</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E9%A9%B1%E5%8A%A8"><span class="nav-text">驱动</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E9%92%88%E5%AF%B9%E6%80%A7%E9%97%AE%E9%A2%98"><span class="nav-text">针对性问题</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#NetworkManager%E5%90%AF%E5%8A%A8"><span class="nav-text">NetworkManager启动</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E9%98%B2%E7%81%AB%E5%A2%99"><span class="nav-text">防火墙</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#netplan%E9%85%8D%E7%BD%AE"><span class="nav-text">netplan配置</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%97%B6%E9%97%B4%E6%88%B3"><span class="nav-text">时间戳</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%B8%8D%E8%83%BD%E8%BF%9E%E4%B8%8A%E7%BD%91"><span class="nav-text">不能连上网</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%BA%92%E8%81%94%E7%BD%91"><span class="nav-text">互联网</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%BF%BB%E5%A2%99"><span class="nav-text">翻墙</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Demo%E7%9A%84%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE"><span class="nav-text">Demo的环境配置</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E8%A1%A5%E5%85%85"><span class="nav-text">补充</span></a></li></ol>
 
     </div>
 </div>
