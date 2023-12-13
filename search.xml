@@ -187,9 +187,9 @@
                      data-src="https://images-1303942840.cos.ap-shanghai.myqcloud.com/clash%20Linux%E8%AE%BE%E7%BD%AE.jpg"
                      
                 ></p>
-<h3 id="wifi登录"><a href="#wifi登录" class="headerlink" title="wifi登录"></a>wifi登录</h3><p>这个问题主要是因为校园网有两个wifi，第一个需要输入账号密码，第二个是跳转网页然后输入账号密码<br>今天解决的是第二个的问题，连接<strong>对应名称的wifi</strong>，需要过段时间自动跳转到网页，输入账号密码既可以登录成功</p>
+<h2 id="wifi登录"><a href="#wifi登录" class="headerlink" title="wifi登录"></a>wifi登录</h2><p>这个问题主要是因为校园网有两个wifi，第一个需要输入账号密码，第二个是跳转网页然后输入账号密码<br>今天解决的是第二个的问题，连接<strong>对应名称的wifi</strong>，需要过段时间自动跳转到网页，输入账号密码既可以登录成功</p>
 <p>第一个的问题主要集中在如何在Linux中对wifi账号密码进行预设，Wifi Setting中输入了账号和密码，但是好像还是不行，这个问题可以联系学校管校园网的问一下具体的解决办法，也不清楚它的加密过程是咋样的</p>
-<h3 id="Demo的环境配置"><a href="#Demo的环境配置" class="headerlink" title="Demo的环境配置"></a>Demo的环境配置</h3><p>主要是安装了python指定的一些包，包括对机器人操作的rospkg包等等，这部分直接按照demo给的README.md文件顺序干下来就行，demo的编译还没弄，一天全在搞网络了，真的难受</p>
+<h2 id="Demo的环境配置"><a href="#Demo的环境配置" class="headerlink" title="Demo的环境配置"></a>Demo的环境配置</h2><p>主要是安装了python指定的一些包，包括对机器人操作的rospkg包等等，这部分直接按照demo给的README.md文件顺序干下来就行，demo的编译还没弄，一天全在搞网络了，真的难受</p>
 <div class="highlight-container" data-rel="Shell"><figure class="iseeu highlight shell"><table><tr><td class="code"><pre><span class="line">pip3 install -r requirements.txt</span><br></pre></td></tr></table></figure></div>
 
 <p>接入gpt的API KEY，在openAI的platform平台申请，导入到yaml文件中</p>
